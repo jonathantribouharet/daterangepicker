@@ -386,9 +386,6 @@
             this.container.find('.drp-calendar.left').addClass('single');
             this.container.find('.drp-calendar.left').show();
             this.container.find('.drp-calendar.right').hide();
-            if (!this.timePicker) {
-                this.container.addClass('auto-apply');
-            }
         }
 
         if ((typeof options.ranges === 'undefined' && !this.singleDatePicker) || this.alwaysShowCalendars) {
@@ -1305,8 +1302,6 @@
 
             if (this.singleDatePicker) {
                 this.setEndDate(this.startDate);
-                if (!this.timePicker)
-                    this.clickApply();
             }
 
             this.updateView();
